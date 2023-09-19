@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Lato", sans-serif ;
+}
+body{
+    background: url(fq.webp) no-repeat center center/ cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.accd{
+    background-color: white;
+    width: 65%;
+    padding: 30px;
+    border-radius: 30px;
+}
+.accd .accd-title{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.accd .content .ques{
+    padding: 18px 0;
+    font-size: 25px;
+    border-bottom: solid 1px black;
+    cursor: pointer;
+    position: relative;
+}
+.accd .content .ques::after{
+    content: '+';
+    position: absolute;
+    right: -10px;
+}
+.accd .content .ans{
+    font-size: 21px;
+    padding-top: 15px;
+    line-height: 1.5;
+    width: 100%;
+
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+/* JS styling Link */
+.accd .content.active .ans{
+    height: 150px;
+}
+.accd .content.active .ques{
+    transition: .5s;
+    font-size: 22px;
+}
+.accd .content.active .ques::after{
+    content: '-';
+    font-size: 30px;
+    transition: .5s;
+
+}
